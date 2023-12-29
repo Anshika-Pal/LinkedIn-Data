@@ -1,0 +1,449 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Data_Scarping_without_next_Button" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1240,5767</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Data_Scarping_without_next_Button_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Data_Scarping_without_next_Button" sap:VirtualizedContainerService.HintSize="1234,5702" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_data" />
+      <Variable x:TypeArguments="x:String" Name="WannaSearch" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
+      <Variable x:TypeArguments="x:String" Name="webUrl" />
+      <Variable x:TypeArguments="x:String" Name="WannaLocation" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="1172,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[dt_data]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[New DataTable()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="1172,3486" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="2347b576-361b-4085-b10e-1b3498fda6de" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,3229" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Text="https://www.linkedin.com/feed/[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="140, 56, 1461, 45" CvType="InputBox" DesignTimeRectangle="186, 59, 1323, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Sukesh' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Sukesh' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="8025f498-5568-4254-97fd-d73677075ee0" InformativeScreenshot="f9df87c6a975865088c358dc84f0978f.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please type " Title="What job profile you want to search on linkedIn?">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[WannaSearch]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="4" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Text="[WannaSearch + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/feed/" CvTextArea="364, 222, 52, 18" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="315, 211, 350, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='search-global-typeahead__input' aaname='' /&gt;" Guid="662399fa-f8cb-470e-82f8-1edcdb70ca8c" InformativeScreenshot="42de752bf3e93bbd16f75aa8b1803c60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(28) Feed | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'Jobs'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/search/results/all/?keywords=Java%20Developer&amp;origin=GLOBAL_SEARCH_HEADER&amp;sid=txr" CvElementArea="185, 192, 62, 35" CvTextArea="199, 202, 35, 15" CvTextArgument="Jobs" CvType="Button" DesignTimeRectangle="188, 194, 56, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Jobs'" FullSelectorArgument="&lt;webctrl aaname='      Jobs  ' parentid='search-reusables__filters-bar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='      Jobs  ' parentid='search-reusables__filters-bar' tag='BUTTON' type='button' class='artdeco-pill artdeco-pill--slate artdeco-pill--choice artdeco-pill--2 search-reusables__filter-pill-button&amp;#xA;     search-reusables__filter-pill-button' check:innerText='Jobs' /&gt;" Guid="4addb5c8-9ce6-4108-8fd1-3c06ea2edb45" InformativeScreenshot="69a2f2488be4d7e2998d4561419b2618.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(5) Search | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please type" Title="Which location you wanna search?">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[WannaLocation]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'India'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Text="[WannaLocation + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3771906693&amp;keywords=python%20developer&amp;origin=SWITCH_SEARCH_VERTICAL" CvTextArea="626, 168, 40, 17" CvTextArgument="India" CvType="Text" DesignTimeRectangle="593, 158, 267, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'India'" FullSelectorArgument="&lt;webctrl id='jobs-search-box-location-id-ember611' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='jobs-search-box-location-id-ember611' tag='INPUT' type='text' class='jobs-search-box__text-input jobs-search-box__text-input--with-clear' aaname='                                City, state, or zip code                                                          ' /&gt;" Guid="423bae0e-724c-4c56-98a5-33f1f659ed46" InformativeScreenshot="1c14681785d866c19d59a098ff9575ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(28) python developer Jobs | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="920, 237, 71, 17" CvTextArgument="Remote" CvType="Text" DesignTimeRectangle="870, 213, 100, 40" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl parentid='global-nav-search' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='global-nav-search' tag='BUTTON' type='button' class='jobs-search-box__submit-button&amp;#xA;          artdeco-button artdeco-button--2 artdeco-button--secondary' aaname='         Search       ' check:innerText='Search' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="4" DisplayName="Click 'Date posted'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3768065356&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&amp;refresh=true" CvTextArea="384, 236, 110, 23" CvTextArgument="Date posted" CvType="Text" DesignTimeRectangle="370, 226, 165, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Date posted'" FullSelectorArgument="&lt;webctrl id='searchFilter_timePostedRange' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchFilter_timePostedRange' tag='BUTTON' type='button' class='artdeco-pill artdeco-pill--slate artdeco-pill--choice artdeco-pill--2 search-reusables__filter-pill-button&amp;#xA;     reusable-search-filter-trigger-and-dropdown__trigger' aaname='            Date posted                          ' check:innerText='Date posted' /&gt;" Guid="9c543a97-1489-485e-9f87-f4a84f15d5bc" InformativeScreenshot="19f679808c7bbe1d73a79da0d02d3f50.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3782120576&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" DesignTimeRectangle="266, 414, 116, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl idx='3' parentid='artdeco-hoverable-artdeco-gen-65' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='artdeco-hoverable-artdeco-gen-65' tag='LABEL' class='search-reusables__value-label' aaname='                    ' check:innerText='Past week&amp;#xD;&amp;#xA;Filter by Past week' /&gt;" Guid="de3c0e20-8480-491e-b3a1-9fbe66327050" ImageBase64="" InformativeScreenshot="27a286d8bf8c98a72baa9c7df7a774e6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NCheck Action="Uncheck" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3782120576&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" DesignTimeRectangle="266, 469, 144, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl idx='4' parentid='artdeco-hoverable-artdeco-gen-65' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='artdeco-hoverable-artdeco-gen-65' tag='LABEL' class='search-reusables__value-label' aaname='                    ' check:innerText='Past 24 hours&amp;#xD;&amp;#xA;Filter by Past 24 hours' /&gt;" Guid="a4747b28-e81d-4289-b26a-b1d824798ef7" ImageBase64="" InformativeScreenshot="da682398ee3e2b33a3cd48ffd6d03b1d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="305, 471, 105, 18" CvTextArgument="Past 24 hours" CvType="Text" DesignTimeRectangle="306, 469, 104, 25" ElementType="Text" FriendlyName="'Past 24 hours'" FullSelectorArgument="&lt;webctrl aaname='               Past 24 hours             ' parentid='artdeco-hoverable-artdeco-gen-65' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='               Past 24 hours             ' parentid='artdeco-hoverable-artdeco-gen-65' tag='SPAN' type='' class='t-14 t-black--light t-normal' check:innerText='Past 24 hours' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'Show 624 results'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3737209039&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&amp;refresh=true" CvElementArea="446, 531, 199, 43" CvTextArea="466, 542, 157, 20" CvTextArgument="Show * results" CvType="Button" DesignTimeRectangle="449, 533, 194, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Show 624 results'" FullSelectorArgument="&lt;webctrl id='ember905' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ember905' tag='BUTTON' type='button' class='artdeco-button artdeco-button--2 artdeco-button--primary ember-view ml2' aaname='      Show * results ' /&gt;" Guid="bbaa1ef7-450f-484e-b685-57ffdf116755" InformativeScreenshot="7e3eeac94a886b9f134d8955960649b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="446, 531, 199, 43" CvTextArea="466, 542, 157, 20" CvTextArgument="Show 624 results" CvType="Button" DesignTimeRectangle="469, 540, 154, 25" ElementType="Text" FriendlyName="'Show 624 results'" FullSelectorArgument="&lt;webctrl parentid='ember905' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ember905' tag='SPAN' type='' class='artdeco-button__text' aaname='     Show * results ' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="3" DisplayName="Click 'Experience level'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3782120576&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" CvTextArea="538, 236, 145, 23" CvTextArgument="Experience level" CvType="Text" DesignTimeRectangle="525, 226, 200, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Experience level'" FullSelectorArgument="&lt;webctrl id='searchFilter_experience' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchFilter_experience' tag='BUTTON' type='button' class='artdeco-pill artdeco-pill--slate artdeco-pill--choice artdeco-pill--2 search-reusables__filter-pill-button&amp;#xA;     reusable-search-filter-trigger-and-dropdown__trigger' aaname='            Experience level                          ' check:innerText='Experience level' /&gt;" Guid="3b3d9fda-c1e3-4c55-8c59-70728f195278" InformativeScreenshot="43ff5f17f310865cd7cfbd463ec3ee11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3782120576&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" CvElementArea="446, 408, 34, 34" CvTextArea="486, 416, 81, 22" CvTextArgument="Entry level" CvType="CheckBox" DesignTimeRectangle="449, 414, 119, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl idx='2' parentid='artdeco-hoverable-artdeco-gen-66' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='artdeco-hoverable-artdeco-gen-66' tag='LABEL' class='search-reusables__value-label' aaname='                    ' check:innerText='Entry level&amp;#xD;&amp;#xA;Filter by Entry level' /&gt;" Guid="08570eeb-02f2-4ee9-bf60-c2ce35f3b7f9" ImageBase64="" InformativeScreenshot="7eb0630df6129491436da6e9f965bfc5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NCheck.Target>
+                  </uix:NCheck>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3782120576&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" CvElementArea="446, 463, 34, 34" CvTextArea="485, 472, 76, 17" CvTextArgument="Associate" CvType="CheckBox" DesignTimeRectangle="449, 469, 113, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl idx='3' parentid='artdeco-hoverable-artdeco-gen-66' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='artdeco-hoverable-artdeco-gen-66' tag='LABEL' class='search-reusables__value-label' aaname='                    ' check:innerText='Associate&amp;#xD;&amp;#xA;Filter by Associate' /&gt;" Guid="ea25ded8-032a-4713-a928-596e95d5a04d" ImageBase64="" InformativeScreenshot="79c99159696276670b7d2374b6a20e75.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NCheck.Target>
+                  </uix:NCheck>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheck Action="Uncheck" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NCheck_5" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3782120576&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" CvElementArea="446, 518, 35, 35" CvTextArea="486, 526, 129, 18" CvTextArgument="Mid-Senior level" CvType="CheckBox" DesignTimeRectangle="449, 524, 166, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl idx='4' parentid='artdeco-hoverable-artdeco-gen-66' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='artdeco-hoverable-artdeco-gen-66' tag='LABEL' class='search-reusables__value-label' aaname='                    ' check:innerText='Mid-Senior level&amp;#xD;&amp;#xA;Filter by Mid-Senior level' /&gt;" Guid="897a66ec-d404-4a7b-8567-f9cb9ed3a6df" ImageBase64="" InformativeScreenshot="fc9a1118552a496d95d573f22ffa57ba.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(30) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NCheck.Target>
+                  </uix:NCheck>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'Show 139 results'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3783417305&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" CvElementArea="622, 695, 196, 44" CvTextArea="641, 707, 155, 20" CvTextArgument="Show 139 results" CvType="Button" DesignTimeRectangle="625, 698, 190, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Show 139 results'" FullSelectorArgument="&lt;webctrl id='ember1125' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ember1125' tag='BUTTON' type='button' class='artdeco-button artdeco-button--2 artdeco-button--primary ember-view ml2' aaname='      Show * results ' check:innerText='Show * results' /&gt;" Guid="8dd1f677-98d7-4d09-9aa0-de33f4dd0990" InformativeScreenshot="fb3bac01a519641556b93b69f6399bd2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(31) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="622, 695, 196, 44" CvTextArea="641, 707, 155, 20" CvTextArgument="Show 139 results" CvType="Button" DesignTimeRectangle="645, 705, 150, 25" ElementType="Text" FriendlyName="'Show 139 results'" FullSelectorArgument="&lt;webctrl parentid='ember1125' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ember1125' tag='SPAN' type='' class='artdeco-button__text' aaname='     Show 139 results ' check:innerText='Show 139 results' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="url" DisplayName="Get Attribute 'Search by'" sap:VirtualizedContainerService.HintSize="388,207" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[webUrl]" ScopeIdentifier="2347b576-361b-4085-b10e-1b3498fda6de" Version="V3">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3702800648&amp;f_E=2%2C3&amp;f_TPR=r604800&amp;geoId=106164952&amp;keywords=Java%20Developer&amp;location=Mumbai%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" CvElementArea="123, 136, 39, 39" CvTextArea="128, 140, 29, 29" CvType="Icon" DesignTimeRectangle="126, 138, 34, 34" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl parentid='global-nav' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='global-nav' tag='path' type='' class='' aaname='' /&gt;" Guid="27bd21c7-7ade-4434-9591-5d0dfe91bf3a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJYSURBVFhHY/g/SMHQcNirT7/+zz30/H/Lpgd0xyB7XwPthwG4w+6++v5fsuDYf660QwOGQfbff/0d7B64w5o2PsCqmN64bfNDsHvgDstfehurQnrjgmW3we4Z/A4DCWBTOGHnY3C8f/r+5/+2i2//GzecwaqOWrhw2R2we/A6rGrNPagsAlx7+hVDHTUxhsOwReXea++gsqhAoeQ4hlpqYaLS2IHr76GyqEC+mI4OwxaVsKyLDC4++oKhjpqYqDQmmnv0/6wDz/4/evvj/8dvv/9vvvDmv37taQx11MREpbGBwESlsYHAQ8dhoLhFV1SzFrMcW3f2NYqaN58RLQIYAKVNs6az/xceefH/wqPPUNH//4/d+fg/dOpVFP3oGCONUdNhXn2X/n/4+hvKwwQrTrxEMQMZE5Urq7E4bO0Zwg77/usvlIUbpM6/iWIODNPUYcSAJ+9+oJgDwzSNShAoWXHnvxywhgCVe1uBlT82YFSP2SCgaYjVrruPogbUMv36EzN6g6dcQVEHwjR1mHvPRRQ1IHzy7ieoLAJkLMRMZzR1mF3beRQ1ILwemATQQc7iWxjqMByGrYDF1h5bc/oVihrkng0M2LSeQ1EDwiAPoQNsDgMFEAgMqMPylmDaOSgchi35DAqHFS3HLKIGhcOKB6vDSlfexVA3KBxWvopMhzl1XsAY/IiecQ1FDcjx6GqUy06gqAHhmJnXMNQ5dlzAUEdUOTYQmKgQGwiM4bDBMtrTij7aQ+uuP7H46tMvYPfAHQYCe66+w0ig9MT7riF6/igOGzzg/38Avp5VuO1Ey0YAAAAASUVORK5CYII=" InformativeScreenshot="29b10e7a2869e9f3352f817af5a17c85.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(5) Java Developer Jobs in Mumbai, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="168, 139, 28, 32" ElementType="Text" FriendlyName="'Search by'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='jobs-search-box__input-icon jobs-search-box__keywords-label' aaname='                                                            ' check:innerText='Search by title, skill, or company' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[webUrl]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="311f83f5ee82feb0107781d3433b422e.png" Selector="&lt;html app='chrome.exe' title='New Tab' /&gt;" Title="New Tab" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[count&gt;0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1172,1787" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1138,1651" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1096,1268" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="5c739d62-8f34-4a6b-b482-833186773136" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1062,1051" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'No matching'" sap:VirtualizedContainerService.HintSize="1000,936" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,262" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">-1</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,719" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="dt_Output" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NMouseScroll KeyModifiers="{x:Null}" CursorMotionType="Instant" Direction="Down" DisplayName="Mouse Scroll 'Jump to'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="30" ScopeIdentifier="5c739d62-8f34-4a6b-b482-833186773136" Version="V3">
+                          <uix:NMouseScroll.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3783648802&amp;f_E=2%2C3&amp;f_TPR=r604800&amp;geoId=114806696&amp;keywords=Python%20Developer&amp;location=Pune%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true" DesignTimeRectangle="119, 303, 503, 433" DesignTimeScaleFactor="1" FriendlyName="'Jump to'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='main' tag='DIV' class='jobs-search-results-list&amp;#xA;          &amp;#xA;          ' aaname='                                                                                                                                                                                                                                    ' /&gt;" Guid="cedfdfb6-fd32-4c0a-b3d8-c9f875c81694" InformativeScreenshot="7c851401e38a7b75679c988fd7626c7c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(5) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="119, 238, 503, 65" ElementType="Container" FriendlyName="'Python Developer'" FullSelectorArgument="&lt;webctrl parentid='main' tag='HEADER' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='HEADER' type='' class='scaffold-layout__list-header jobs-search-results-list__header--blue&amp;#xA;          jobs-search-results-list__header ph1&amp;#xA;          ' aaname='                                                                                                                        ' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NMouseScroll.Target>
+                        </uix:NMouseScroll>
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPages="2" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Company Profile' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Company Name' ReferenceName='Column3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Profile Link' ReferenceName='Column4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Location' ReferenceName='Column5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Actively Recruiting' ReferenceName='Column6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column5' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column6' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+                          <uix:NExtractData.NextLink>
+                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" Guid="61bb9b08-7fd7-45e7-849b-27b2fecd8555" />
+                          </uix:NExtractData.NextLink>
+                          <uix:NExtractData.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="254, -4195, 608, 4770" DesignTimeScaleFactor="1.25" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='main' tag='UL' /&gt;" Guid="b5dedffc-757d-4dba-b6a5-ee721dc5464d" InformativeScreenshot="1268aeb7488d7be5508666734bad32d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(31) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NExtractData.Target>
+                        </uix:NExtractData>
+                        <ui:OutputDataTable DataTable="[ExtractDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dt_Output]" />
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[dt_Output]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3431380710&amp;f_E=2%2C3&amp;f_TPR=r604800&amp;geoId=106164952&amp;keywords=Python%20Developer&amp;location=Mumbai%2C%20Maharashtra%2C%20India&amp;origin=JOB_SEARCH_PAGE_JOB_FILTER&amp;refresh=true&amp;start=100" DesignTimeRectangle="119, 262, 1128, 286" DesignTimeScaleFactor="1" FriendlyName="'No matching'" FullSelectorArgument="&lt;webctrl aria-role='alert' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='alert' tag='DIV' type='' class='jobs-search-no-results-banner&amp;#xA;         mb5' aaname='                              ' check:innerText='No matching jobs found.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Your search returned no results. Try removing filters or rephrasing your' /&gt;" Guid="90723b2c-455c-4283-abe3-ae092fc28222" InformativeScreenshot="f6eb278c21cc6406ee0753ad1d281bea.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(2) Python Developer Jobs in Mumbai, Maharashtra, India | LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALiSURBVFhH7VfNaxNBFN/UGJMUvdSi0Kog1YvgwYtHwZPnFj0oCFbT5GCUVmwFxYKotQdvKqJ/QRUUNRTEotmVpk1bY1H8uNh8WGtpU6utkkQ3ec5vshO3aTcNslty6IMfmX3zPn4zbzLDkypCXB4ZqHJ7lFp3i1JvMWrcPsXm9ipacm9QcpzstblalCY2GWH4bDHCDE1r/M9sTl9QktgHUKNN0AoBC8VuFwhga8CuYOTyKLTuhMyBsX7OBCAXci5NAAm3tIXo0M13HNvODJhNwpgAEm1lCXvCU/Qrk2VQqWdoihEylYQxAWz5Qbbqn2mVhGAMHeZgYwIqmEC+/qIEKi8DSoCyrEgJACTCwcOqARzIcpKzu4TblWFbmgBgPy5T1bEgx1o2RnDoUQZ8C4iE0K/3vaRNp/qp1t9fsNXH1MGYAIIhyLn7Y3Q1EOfAGDoEPHD9DXUFEnTlSZw6H8Zo94Vh2nw6RIdvv6e7wQl6+naGAqNJusb89l56RdWLk5cm4GQEdnSEafxbWjuCxMfQ2ZuDPLGQ+ZRKFx9E6VFkmp8XveQYotMpOnrnA1V7LSLwW83R5I8M5ZDNQOLJFO3rek3OheUwh4AQNZujxEyaIrH5PCFNL+TW8y+0gZ0PxNdgHoHMnyzd6BunPZ0jVN86QPu7R2lobE6bzctIdK74JjWPQPDjLNW1hsjBthgJ8M84wg4k7g8h8WSaGtoHeWzk0HKZQ6C7N7Hg7+b0yLTr/DB9/Z7RLP75W0Lg8uMYXzV8hX9D+9L+K0bAyH+VwCqBsglsPzvIL4+J2TQHxtDZm2XquPeJ33YIil98O4oIGPmXRQDAswoHsAYwhg5PMl6+nZoev3glxVO9nL/OpjQBAGz1EHrcdnp9cXIBvQ1QNL+IAJoENAvFhlYBTRCaIUlCe2T397HWTG7UJsDOSrCFyo32thc2l0/O94dMAbDmVAYrbM3/om5ZeOSNaITREFeASNJf503cP1oKQCkAAAAASUVORK5CYII=" InformativeScreenshot="f96b6505c3ba505139df097e33ba6544.jpg" Selector="&lt;html app='chrome.exe' title='(31) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn' /&gt;" Title="(31) Python Developer Jobs in Pune, Maharashtra, India | LinkedIn" Url="[webUrl+&quot;&amp;start=&quot;+count.ToString]" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <ui:MergeDataTable Destination="[dt_data]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="1096,133" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[ExtractDataTable]" />
+          <Assign sap:VirtualizedContainerService.HintSize="1096,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[count+25]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+    </ui:InterruptibleDoWhile>
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_data]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="1172,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="PythonDeveloperScrapeData.xlsx" />
+  </Sequence>
+</Activity>

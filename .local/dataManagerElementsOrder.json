@@ -1,0 +1,41 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Html_Content_Of_Profile_Link.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SerialNo&Sequence_1",
+        "LinkColumn&Sequence_1",
+        "CurrentIndex&Sequence_1",
+        "HtmlContent&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Data Scarping without next Button.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Output&Sequence_10",
+        "WannaLocation&Sequence_1",
+        "webUrl&Sequence_1",
+        "dt_data&Sequence_1",
+        "WannaSearch&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "count&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
