@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tYYmxql9LFM0Q92hB4InG772b1PGE0zdYTJOnKJ+yG36jwe00oQJHwVPmDUPd56rjUAUFJNrNymLYFx4ggsjMA==",
+  "dgSpecHash": "OxmlJ/Nf8OQPqzhZrgNOqhXTR4dnQfgdJmr/qOaHl0rKuZDMFEViXJ6px75enQNL5Y+F38n6t82+15tmKbfB0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Downloads\\UiPath\\UiPath\\Python Developer\\.local\\",
+  "projectFilePath": "C:\\Users\\Dell\\Documents\\UiPath\\Python Developer\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.18.0\\azure.core.1.18.0.nupkg.sha512",
@@ -269,6 +269,7 @@
     "C:\\Users\\Dell\\.nuget\\packages\\uipath.ocr.activities\\3.17.1\\uipath.ocr.activities.3.17.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\uipath.ocr.contracts\\2.16.0\\uipath.ocr.contracts.2.16.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\uipath.platform\\23.10.0\\uipath.platform.23.10.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\uipath.python.activities\\1.7.1\\uipath.python.activities.1.7.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\uipath.system.activities\\23.10.3\\uipath.system.activities.23.10.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\uipath.system.activities.runtime\\23.10.3\\uipath.system.activities.runtime.23.10.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\uipath.system.activities.runtime.windows\\23.10.3\\uipath.system.activities.runtime.windows.23.10.3.nupkg.sha512",

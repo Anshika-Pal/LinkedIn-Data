@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,1873</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,1741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,42 +112,38 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Html_Content_Of_Profile_Link" sap:VirtualizedContainerService.HintSize="622,1808" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Html_Content_Of_Profile_Link" sap:VirtualizedContainerService.HintSize="622,1676" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="SerialNo" />
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="LinkColumn" />
-      <Variable x:TypeArguments="x:Int32" Name="CurrentIndex">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="CurrentIndex" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadColumn DisplayName="Read Column Workbook" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ReadColumn_1" Result="[SerialNo]" SheetName="Sheet1" StartingCell="A2" WorkbookPath="ModifyProfileLinkfile.xlsx" />
-    <ui:ReadColumn DisplayName="Read Column Workbook" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ReadColumn_2" Result="[LinkColumn]" SheetName="Sheet1" StartingCell="D2" WorkbookPath="ModifyProfileLinkfile.xlsx" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CurrentIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="560,1441" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[LinkColumn]">
+    <ui:ReadColumn DisplayName="Read Column Workbook" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ReadColumn_1" Result="[SerialNo]" SheetName="Sheet1" StartingCell="A2" WorkbookPath="Data Engineer.xlsx" />
+    <ui:ReadColumn DisplayName="Read Column Workbook" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ReadColumn_2" Result="[LinkColumn]" SheetName="Sheet1" StartingCell="D2" WorkbookPath="Data Engineer.xlsx" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CurrentIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="560,1309" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[LinkColumn]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1255" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1123" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="484,1167" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c575962c-54f1-487d-8e54-6d45e29ba1f5" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="484,1035" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c575962c-54f1-487d-8e54-6d45e29ba1f5" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,950" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,818" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="HtmlContent" />
                     </Sequence.Variables>
@@ -167,11 +163,28 @@
                       </uix:NGetAttributeGeneric.Target>
                     </uix:NGetAttributeGeneric>
                     <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[&quot;C:\Users\Dell\Documents\UiPath\Python Developer\HiringManager\&quot;+CurrentIndex.ToString+&quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="WriteTextFile_4" Text="[HtmlContent]" />
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'New Tab'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c575962c-54f1-487d-8e54-6d45e29ba1f5" Version="V3">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable CvTextArea="933, 20, 18, 18" CvTextArgument="+" CvType="Text" DesignTimeRectangle="926, 9, 46, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'New Tab'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Sukesh' role='pane' /&gt;&lt;ctrl name='New Tab' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Sukesh' role='pane' /&gt;&lt;ctrl name='New Tab' role='push button' automationid='' /&gt;" Guid="acec43e1-661a-4cfe-9591-01e2c4c86116" InformativeScreenshot="c2043be8695d9f38c49c8ee36adef7d8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                      </uix:NClick.Target>
-                    </uix:NClick>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'New Tab'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c575962c-54f1-487d-8e54-6d45e29ba1f5" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CvTextArea="933, 20, 18, 18" CvTextArgument="+" CvType="Text" DesignTimeRectangle="926, 9, 46, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'New Tab'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Sukesh' role='pane' /&gt;&lt;ctrl name='New Tab' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Sukesh' role='pane' /&gt;&lt;ctrl name='New Tab' role='push button' automationid='' /&gt;" Guid="acec43e1-661a-4cfe-9591-01e2c4c86116" InformativeScreenshot="c2043be8695d9f38c49c8ee36adef7d8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>

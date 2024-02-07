@@ -14,8 +14,8 @@
       "VariablesSectionElementsOrder": [
         "SerialNo&Sequence_1",
         "LinkColumn&Sequence_1",
-        "CurrentIndex&Sequence_1",
-        "HtmlContent&Sequence_3"
+        "HtmlContent&Sequence_3",
+        "CurrentIndex&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -33,6 +33,102 @@
         "ExtractDataTable&Sequence_1",
         "count&Sequence_1"
       ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Run Python Script.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Add_Excel_Link_Into_Queue_Item.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueItems&Sequence_1",
+        "ExcelSheet&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Company_Job_Profile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Status&Sequence_1",
+        "dt_data&Sequence_1",
+        "dt_String&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "CompanyNames&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "HiringManagerEmailId.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ContactInfo&Sequence_4",
+        "HtmlContent&Sequence_1",
+        "CurrentIndex&Sequence_1",
+        "ManagerLinks&Sequence_1",
+        "EmailId&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Remove Data that doesn't contain Data Engineer keyword.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "st_FunctionOutput&Sequence_1",
+        "py_ScriptOutObj&Sequence_1",
+        "py_ScriptObj&Sequence_1",
+        "Column_Index&Sequence_1",
+        "In_Excel&Sequence_1",
+        "dt_removeDup&Sequence_1",
+        "dt_Sorted&Sequence_1",
+        "st_FIlter_Dt&Sequence_1",
+        "FilterDataTable&Sequence_1",
+        "Dt_Table&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Samples/Calculator Automation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "winFolder&Sequence_1",
+        "resultValue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Samples/Ping Monitor.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strPing&Flowchart_1",
+        "output&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Hello.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
